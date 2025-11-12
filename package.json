@@ -1,0 +1,32 @@
+{
+  "name": "promotions-favorites",
+  "version": "1.0.0",
+  "description": "Promotions Favorites Feature - Technical Test",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend", 
+    "shared"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:backend && npm run install:frontend && npm run install:shared",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install", 
+    "install:shared": "cd shared && npm install",
+    "dev:backend": "cd backend && npm run start:dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:all": "npm run build:shared && npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build:shared": "cd shared && npm run build",
+    "test:all": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && npm run test",
+    "test:frontend": "cd frontend && npm run test",
+    "lint:all": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "keywords": ["promotions", "favorites", "nestjs", "nextjs", "ionic"],
+  "author": "",
+  "license": "ISC"
+}

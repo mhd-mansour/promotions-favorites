@@ -1,0 +1,22 @@
+{
+  "name": "@promotions-favorites/shared",
+  "version": "1.0.0",
+  "description": "Shared types and schemas for Promotions Favorites",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rimraf dist"
+  },
+  "keywords": ["types", "schemas", "zod"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.9.3",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0"
+  }
+}
