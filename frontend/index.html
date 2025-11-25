@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions Favorites</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .promotion-card { border: 1px solid #ddd; padding: 16px; margin: 10px 0; border-radius: 8px; }
+        .btn { padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .btn:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function App() {
+            const [promotions, setPromotions] = React.useState([]);
+            const [loading, setLoading] = React.useState(true);
+            
+            React.useEffect(() => {
+                fetch('http://localhost:3001/promotions')
+                    .then(res => res.json())
+                    .then(data => {
+                        setPromotions(data);
+                        setLoading(false);
+                    })
+                    .catch(err => {
+                        console.error('Error fetching promotions:', err);
+                        setLoading(false);
+                    });
+            }, []);
+            
+            if (loading) return <div className="container">Loading...</div>;
+            
+            return (
+                <div className="container">
+                    <div className="header">
+                        <h1>Promotions Favorites</h1>
+                        <p>Browse and manage your favorite promotions</p>
+                    </div>
+                    
+                    <div>
+                        {promotions.length === 0 ? (
+                            <p>No promotions found. Make sure the backend is running on port 3001.</p>
+                        ) : (
+                            promotions.map(promo => (
+                                <div key={promo.id} className="promotion-card">
+                                    <h3>{promo.title}</h3>
+                                    <p>{promo.description}</p>
+                                    <p><strong>Merchant:</strong> {promo.merchant}</p>
+                                    <button className="btn">Add to Favorites</button>
+                                </div>
+                            ))
+                        )}
+                    </div>
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

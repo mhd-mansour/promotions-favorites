@@ -1,0 +1,23 @@
+{
+  "title": "Promotions Favorites",
+  "search": "Search promotions...",
+  "filterByMerchant": "Filter by merchant",
+  "allMerchants": "All merchants",
+  "noPromotions": "No promotions found",
+  "myFavorites": "My Favorites",
+  "totalFavorites": "Total Favorites",
+  "potentialRewards": "Potential Rewards",
+  "active": "Active",
+  "expired": "Expired",
+  "noActiveFavorites": "No active favorites yet",
+  "noExpiredFavorites": "No expired favorites",
+  "browsePromotions": "Browse promotions to add favorites",
+  "addedToFavorites": "Added to favorites",
+  "removedFromFavorites": "Removed from favorites",
+  "failedToUpdate": "Failed to update favorite",
+  "errorLoading": "Error loading",
+  "expiresIn": "Expires in {{days}} days",
+  "previous": "Previous",
+  "next": "Next",
+  "pageOf": "Page {{current}} of {{total}}"
+}

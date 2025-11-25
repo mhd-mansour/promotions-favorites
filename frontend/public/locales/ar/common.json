@@ -1,0 +1,23 @@
+{
+  "title": "العروض المفضلة",
+  "search": "البحث في العروض...",
+  "filterByMerchant": "تصفية حسب التاجر",
+  "allMerchants": "جميع التجار",
+  "noPromotions": "لم يتم العثور على عروض",
+  "myFavorites": "مفضلاتي",
+  "totalFavorites": "إجمالي المفضلات",
+  "potentialRewards": "المكافآت المحتملة",
+  "active": "نشط",
+  "expired": "منتهي الصلاحية",
+  "noActiveFavorites": "لا توجد مفضلات نشطة بعد",
+  "noExpiredFavorites": "لا توجد مفضلات منتهية الصلاحية",
+  "browsePromotions": "تصفح العروض لإضافة المفضلات",
+  "addedToFavorites": "تمت الإضافة إلى المفضلات",
+  "removedFromFavorites": "تمت الإزالة من المفضلات",
+  "failedToUpdate": "فشل في تحديث المفضلة",
+  "errorLoading": "خطأ في التحميل",
+  "expiresIn": "ينتهي خلال {{days}} أيام",
+  "previous": "السابق",
+  "next": "التالي",
+  "pageOf": "صفحة {{current}} من {{total}}"
+}

@@ -5,13 +5,13 @@
   "private": true,
   "workspaces": [
     "backend",
-    "frontend", 
+    "frontend",
     "shared"
   ],
   "scripts": {
     "install:all": "npm install && npm run install:backend && npm run install:frontend && npm run install:shared",
     "install:backend": "cd backend && npm install",
-    "install:frontend": "cd frontend && npm install", 
+    "install:frontend": "cd frontend && npm install",
     "install:shared": "cd shared && npm install",
     "dev:backend": "cd backend && npm run start:dev",
     "dev:frontend": "cd frontend && npm run dev",
@@ -26,7 +26,18 @@
     "lint:backend": "cd backend && npm run lint",
     "lint:frontend": "cd frontend && npm run lint"
   },
-  "keywords": ["promotions", "favorites", "nestjs", "nextjs", "ionic"],
+  "keywords": [
+    "promotions",
+    "favorites",
+    "nestjs",
+    "nextjs",
+    "ionic"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  }
 }
